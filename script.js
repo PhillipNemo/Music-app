@@ -111,7 +111,7 @@ function pausesong(){
 load_track (i);
 // next function
 function next_song (){
-    if (i < allSongs.length){
+    if (i < allSongs.length - 1){
         i += 1;
         load_track(i);
         playsong();
@@ -128,7 +128,7 @@ function previous_song (){
         load_track(i);
         playsong();
     }else{
-        i =  allSongs.length;
+        i =  allSongs.length - 1;
         i += 1;
         load_track(i);
         playsong();
@@ -159,6 +159,7 @@ for (let i = 0; i < songs.length; i++){
         track.src = allSongs[i].path;
         songArtist.innerHTML = allSongs[i].singer;
         songTheme.innerHTML = allSongs[i].name;
+        playsong();
 	})
 }
 
