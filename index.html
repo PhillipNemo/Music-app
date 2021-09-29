@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./iconfont/icofont/icofont/icofont.min.css">
+    <title>My Music App</title>
+</head>
+<body>
+    <div class="container">
+                <section id="top">
+                        <div class="heading">
+                            <div class="back-arrow">
+                                <i id="philips" class="icofont-brand-philips"></i>
+                            </div>
+                            <div class="search">
+                                <form action="">
+                                <input type="text" id="text">
+                                <i class="icofont-search"></i>
+                            </form>
+                            </div>  
+                        </div>
+                        
+                        <h1 id="song-artist"></h1>
+                        <h3 style="font-family: cursive;" id="song-theme"></h3>
+                        
+                        <div class="music-progress">
+                            <div class="previous-btn" onclick="previous_song ()">
+                                <i class="icofont-ui-previous"></i>
+                            </div>
+                            <div  id="play" onclick="just_play()">
+                                <i class="icofont-ui-play"></i> 
+                            </div>
+                            <div class="next-btn"   onclick="next_song ()">
+                                <i class="icofont-ui-next"></i>
+                            </div> 
+                            <input type="range" max="100" id="duration_slider" onchange="change_duration()" value="0">
+                        </div>  
+                </section>
+                <section id="bottom">
+                    <div class="songs" >
+                        <div class="image">
+                            <img id="myImage" src="./images/20190531-130213.png" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Bruno Mars</p>
+                            <p id="song-title">Somewhere in Brooklyn</p>
+                            
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite"  ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                        <svg  xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+
+                    <div class="songs" >
+                        <div class="image" >
+                            <img src="./images/Screenshot_20191109-231926.png" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Kelly Clarkson</p>
+                            <p id="song-title">I Dare You</p>
+                            
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+
+                        </div>
+                        <div class="rating-star">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/FB_IMG_15332963624900220.jpg" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Rachel Platten</p>
+                            <p id="song-title">Fight Song</p>
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/IMG_20181119_153714.jpg" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Flo-Rida</p>
+                            <p id="song-title">Right Round</p>
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star">
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/FB_IMG_15332963826631643.jpg" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Harry Styles</p>
+                            <p id="song-title">Watermelon Sugar</p>
+
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star" >
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/Screenshot_20191109-232555 (2).png" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Lady Gaga</p>
+                            <p id="song-title">Just Dance</p>
+
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star" >
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/Screenshot_20191109-232546 (2).png" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">JP Saxe ft Julia Michaels</p>
+                            <p id="song-title">If The World Was Ending</p>
+
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star" >
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+                    <div class="songs" >
+                        <div class="image">
+                            <img src="./images/Screenshot_20191109-232527 (2).png" width="100%" height="100%" alt="">
+                        </div>
+                        <div class="artist">
+                            <p id="artist-name">Justin Beiber</p>
+                            <p id="song-title">Intentions</p>
+
+                            <div class="icons">
+                                <i title="Add to favourite" class="icofont-favourite" id="favourite" ></i>
+                                <i title="Download album" class="icofont-download"></i>
+                            </div>
+                        </div>
+                        <div class="rating-star" >
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                            <i class="icofont-star"></i>
+                        </div>
+                        <div  id="more" title="More">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                      </svg> 
+                        </div>
+                    </div>
+
+
+                   
+                </section>
+
+    </div>
+
+
+
+
+<!-- javascript here -->
+    <script src="script.js"></script>
+</body>
+</html>
