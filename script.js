@@ -50,8 +50,13 @@ let allSongs = [
     },
     {
         name : 'Just Dance',
-        path : "songs/Lady_Gaga_Just_Dance.mp3.mp3",
+        path : "songs/Lady_Gaga_Just_Dance.mp3",
         singer: 'Lady Gaga'
+    },
+    {
+        name : 'Right Round',
+        path : "songs/Flo-Rida_Right_round.mp3",
+        singer: 'Flo Rida'
     }
 ]
 
