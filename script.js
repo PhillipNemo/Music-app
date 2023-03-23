@@ -1,5 +1,5 @@
 let audio = document.querySelector('#audio');
-let songs = document.querySelectorAll('.songs');
+let songs = document.querySelectorAll('.artist');
 
 let slider = document.querySelector('#duration_slider');
 
@@ -34,29 +34,24 @@ let allSongs = [
         singer: 'Rachel Platten'
     },
     {
-        name : 'Right Round',
-        path : "songs/Flo-Rida_Right_round.mp3",
-        singer: 'Flo-Rida'
-    },
-    {
         name : 'Watermelon Sugar',
         path : "songs/Harry_Styles_Watermelon_Sugar.mp3",
         singer: 'Harry Styles'
     },
     {
-        name : 'Just Dance',
-        path : "songs/Lady_Gaga_Just_Dance.mp3",
-        singer: 'Lady Gaga'
-    },
-    {
         name : 'If the world was ending',
         path : "songs/JP_Saxe_Julia_Michaels.mp3",
-        singer: 'JP Saxe ft Julia Michael'
+        singer: 'Julia Michael'
     },
     {
         name : 'Intentions',
         path : "songs/Justin_Bieber_Intentions_ft_Quavo.mp3",
         singer: 'Justin Beiber'
+    },
+    {
+        name : 'Just Dance',
+        path : "songs/Lady_Gaga_Just_Dance.mp3.mp3",
+        singer: 'Lady Gaga'
     }
 ]
 
@@ -111,7 +106,7 @@ function pausesong(){
 load_track (i);
 // next function
 function next_song (){
-    if (i < allSongs.length - 1){
+    if (i < allSongs.length){
         i += 1;
         load_track(i);
         playsong();
@@ -128,7 +123,7 @@ function previous_song (){
         load_track(i);
         playsong();
     }else{
-        i =  allSongs.length - 1;
+        i =  allSongs.length;
         i += 1;
         load_track(i);
         playsong();
@@ -159,7 +154,16 @@ for (let i = 0; i < songs.length; i++){
         track.src = allSongs[i].path;
         songArtist.innerHTML = allSongs[i].singer;
         songTheme.innerHTML = allSongs[i].name;
-        playsong();
+        playsong()
 	})
 }
 
+
+
+let hearts = document.querySelectorAll(".icofont-heart");
+
+hearts.forEach(heart => {
+     heart.addEventListener("click", () => {
+        heart.classList.toggle("clicked-heart")
+     })   
+});
