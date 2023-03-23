@@ -57,6 +57,11 @@ let allSongs = [
         name : 'Right Round',
         path : "songs/Flo-Rida_Right_round.mp3",
         singer: 'Flo Rida'
+    },
+    {
+        name : 'Fight Song',
+        path : "songs/Fight Song_Rachel_Platten.mp3",
+        singer: 'Rachel Platten'
     }
 ]
 
